@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ros_numpy"
+version = "0.0.5"
+description = "Tools for converting ROS messages to and from numpy arrays"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.6"
+dependencies = [
+    "numpy",
+]
+
+[project.urls]
+Homepage = "https://github.com/CiRA-AMI/cira_ros_numpy"
+
+[tool.setuptools.packages.find]
+where = ["src"]
