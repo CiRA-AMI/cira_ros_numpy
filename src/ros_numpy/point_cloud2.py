@@ -149,7 +149,7 @@ def array_to_pointcloud2(cloud_arr, stamp=None, frame_id=None):
     cloud_msg.point_step = cloud_arr.dtype.itemsize
     cloud_msg.row_step = cloud_msg.point_step*cloud_arr.shape[1]
     cloud_msg.is_dense = all([np.isfinite(cloud_arr[fname]).all() for fname in cloud_arr.dtype.names])
-    cloud_msg.data = cloud_arr.tostring()
+    cloud_msg.data = cloud_arr.tobytes()
     return cloud_msg
 
 def merge_rgb_fields(cloud_arr):
